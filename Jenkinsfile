@@ -1,3 +1,5 @@
+@Library('jenkins-shared-library') _
+
 pipeline{
     agent {
         label "ws"
@@ -5,6 +7,9 @@ pipeline{
     stages{
         stage('Lint Checks'){
             steps{
+                script{
+                    sample.info("user")
+                }
                 sh "echo ***** Starting Style Checks ***** "
                 sh "/home/centos/node_modules/jslint/bin/jslint.js server.js || true"
                 sh "echo ***** Style Checks are completed ***** "
