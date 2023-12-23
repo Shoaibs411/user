@@ -1,6 +1,7 @@
-@Library('jenkins-shared-library') _
+@Library('jenkins-shared-library') _ 
 
 env.COMPONENT="user"
-env.SONAR_URL="PRIVATE_IP_ADDRESS_OF_SONARQUBE_SERVER"
-
+env.APP_TYPE="nodejs"
+env.SONAR_URL="172.31.45.101"
+env.NEXUS_URL="172.31.34.215"
 nodejs()
