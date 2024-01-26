@@ -2,6 +2,7 @@ module "user"{
   source                  = "./vendor/modules/app"
 
   ENV                     = var.ENV
+  INTERNAL                = var.INTERNAL
   APP_VERSION             = var.APP_VERSION
   COMPONENT               = var.COMPONENT
   SPOT_INSTANCE_TYPE      = var.SPOT_INSTANCE_TYPE
